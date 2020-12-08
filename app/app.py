@@ -9,18 +9,14 @@ from flask import request
 app = Flask(__name__)
 
 
-# [/]にアクセスがあった場合に"HELLO WORLD"の文字列を返す
+# [/]にアクセスがあった
 @app.route("/")
-def hello():
-    return "卒業制作アプリだぜええええええ"
-
-
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    name = request.args.get("name")
+
+    return render_template("index_1.html", name=name)
 
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-

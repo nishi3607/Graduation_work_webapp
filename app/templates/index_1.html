@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>{{name}}</title>
 </head>
 <body>
-<h1>へい</h1>
+{% if name %}
+<h1>{{name}}さん！いままでありがとうございました！</h1>
+{% else %}
+<h1>ありがとうございました！</h1>
+{% endif %}
 </body>
 </html>
