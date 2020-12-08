@@ -1,5 +1,8 @@
 # Flaskとrender_templateをインポート
 from flask import Flask, render_template
+import requests
+from flask import Flask
+from flask import request
 
 # Flaskオブジェクトの作成
 
@@ -19,4 +22,5 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
