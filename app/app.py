@@ -18,8 +18,15 @@ def inde():
 @app.route("/index")
 def index():
     name = request.args.get("name")
-    study = ['python','SQL','WebAPI','Git']
-    return render_template("index_1.html", name=name,study=study)
+    study = ['python', 'SQL', 'WebAPI', 'Git']
+    return render_template("index_1.html", name=name, study=study)
+
+
+@app.route("/index", methods=["post"])
+def post():
+    name = request.form["name"]
+    study = ['python', 'SQL', 'WebAPI', 'Git']
+    return render_template("index_1.html", name=name, study=study)
 
 
 if __name__ == "__main__":
