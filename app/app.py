@@ -11,11 +11,15 @@ app = Flask(__name__)
 
 # [/]にアクセスがあった
 @app.route("/")
+def inde():
+    return "<h1>/index?name=名前を入れてね</p1>"
+
+
 @app.route("/index")
 def index():
     name = request.args.get("name")
-
-    return render_template("index_1.html", name=name)
+    study = ['python','SQL','WebAPI','Git']
+    return render_template("index_1.html", name=name,study=study)
 
 
 if __name__ == "__main__":
