@@ -13,11 +13,11 @@
 {% endif %}
 <form action="/index" method="POST">
   <input type=""text name="name" placeholder="Enter name">
-  <input type="submit" value="submit">
+  <input type="submit" value="ぽちっとな">
 </form>
-<h3>いろいろ学びましたね〜例えば</h3>
-{% for word in study %}
-<p>{{word}}</p>
-{% endfor %}
+  <h3>いろいろ学びましたね〜</h3>
+  {% for word in study %}
+  <p>{{word}}</p>
+  {% endfor %}
 </body>
 </html>

@@ -19,13 +19,13 @@ def inde():
 def index():
     name = request.args.get("name")
     study = ['python', 'SQL', 'WebAPI', 'Git']
-    return render_template("index_1.html", name=name, study=study)
+    return render_template("index_1.html", name=name,study=study)
 
 
 @app.route("/index", methods=["post"])
 def post():
     name = request.form["name"]
-    study = ['python', 'SQL', 'WebAPI', 'Git']
+    study = ['・python', '・SQL', '・WebAPI', '・Git']
     return render_template("index_1.html", name=name, study=study)
 
 
