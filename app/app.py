@@ -16,14 +16,21 @@ app = Flask(__name__)
 
 @app.route("/index")
 def index():
-    name = request.args.get("name")
-    return render_template("index_1.html", name=name)
+    teacher_name = []
+    name = request.get("name")
+    if name == ["大平", "伊藤"]:
+        teacher_name = '先生'
+
+    return render_template("index_1.html", name=name,teacher_name=teacher_name)
 
 
 @app.route("/index", methods=["post"])
 def post():
+    teacher_name = []
     name = request.form["name"]
-    return render_template("index_1.html", name=name)
+    if name == ["大平","伊藤"]:
+        teacher_name = '先生'
+    return render_template("index_1.html", name=name,teacher_name=teacher_name)
 
 
 if __name__ == "__main__":

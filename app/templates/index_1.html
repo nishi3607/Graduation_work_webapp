@@ -6,40 +6,45 @@
 </head>
 <body>
 <style type="text/css">
+        body {
+          font-family: "Avenir Next";
+        }
         .input_name{
         font-size:100px;
-        background-color:#bdf7f1;
-        width:5000px;
          }
-        .blue{
+        .messeage{
         font-size:60px;
-        color:#00FF00;
+
 
         }
-        body {
-  font-family: "Avenir Next";
-}
 
-li {
-  list-style: none;
-  float: left;
-  /* 上下のpaddingを33px、左右のpaddingを20pxにしてください */
-  padding:33px 40px;
+        li {
+          list-style: none;
+          float: left;
+          padding:33px 40px;
 
-}
-
-.header {
-  background-color: #26d0c9;
-  color: #fff;
-  height: 90px;
-}
-
-.header-logo {
-  float: left;
-  font-size: 36px;
-  /* 上下のpaddingを20px、左右のpaddingを40pxにしてください */
-  padding:20px 40px;
         }
+
+        .header {
+          background-color: #26d0c9;
+          color: #fff;
+          height: 90px;
+        }
+
+        .header-logo {
+          float: left;
+          font-size: 36px;
+          padding:20px 40px;
+                }
+         .main {
+          background-color: #bdf7f1;
+          height: 600px;
+}
+
+         .footer {
+           background-color: #ceccf3;
+           height: 270px;
+}
 
 
     </style>
@@ -55,14 +60,21 @@ li {
         </ul>
       </div>
     </div>
-<dir class="input_name">〜{{name}}さんへ〜</dir>
-<dir class="blue">{{name}}さん！!４ヶ月間本当にありがとうございました！</dir>
+<div class="main">
+  <div class="main-logo"><dir class="input_name">〜{{name}}{{teacher}}さんへ〜</dir></div>
+  <dir class="messeage">{{name}}さん！約４ヶ月間ありがとうございました！</dir>
+</div>
+
+    <div class="footer">
+      </div>
+
 {% else %}
 <h1></h1>
 {% endif %}
 <form action="/index" method="POST">
   <input type=text name="name" placeholder="名前入れてくださいな">
   <input type="submit" value="ぽちっとな">
+
 </form>
 </body>
 </html>
