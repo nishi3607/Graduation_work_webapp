@@ -11,8 +11,7 @@ app = Flask(__name__)
 
 # [/]にアクセスがあった
 @app.route("/")
-def inde():
-    return "<h1>/index?name=名前を入れてね</p1>"
+
 
 
 @app.route("/index")

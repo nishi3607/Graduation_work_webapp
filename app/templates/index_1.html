@@ -6,18 +6,19 @@
 </head>
 <body>
 {% if name %}
-<h1>〜{{name}}さんへ〜</h1>
-<p1>４ヶ月間、ありがとうございました。</p1>
+<h1>　　　　　　〜{{name}}さんへ〜</h1>
+<p1>　　　　４ヶ月間、ありがとうございました。</p1>
+<h3>　　　　たくさんのことを学びました</h3>
+<p>　　　　　　　例えば・・</p>
+{% for word in study %}
+<p>{{word}}</p>
+{% endfor %}
 {% else %}
-<h1>４ヶ月間、ありがとうございました。</h1>
+<h1></h1>
 {% endif %}
 <form action="/index" method="POST">
   <input type=""text name="name" placeholder="Enter name">
   <input type="submit" value="ぽちっとな">
 </form>
-  <h3>いろいろ学びましたね〜</h3>
-  {% for word in study %}
-  <p>{{word}}</p>
-  {% endfor %}
 </body>
 </html>
