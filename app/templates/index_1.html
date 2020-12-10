@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{name}}</title>
+  <title>卒業制作　Webアプリ</title>
 </head>
 <body>
+<div class="header"></div>
 {% if name %}
 <h1>〜{{name}}さんへ〜</h1>
-<p1>４ヶ月間、ありがとうございました。</p1>
+<p>４ヶ月間、ありがとうございました。</p>
 <h3>たくさんのことを学びました</h3>
 <p>例えば・・</p>
 {% for word in study %}
@@ -17,7 +18,7 @@
 <h1></h1>
 {% endif %}
 <form action="/index" method="POST">
-  <input type=""text name="name" placeholder="Enter name">
+  <input type=text name="name" placeholder="Enter name">
   <input type="submit" value="ぽちっとな">
 </form>
 </body>
