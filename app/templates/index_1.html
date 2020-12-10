@@ -12,18 +12,51 @@
         width:5000px;
          }
         .blue{
-        font-size:40px;
-        color:#bdf7f1;
+        font-size:60px;
+        color:#00FF00;
 
         }
+        body {
+  font-family: "Avenir Next";
+}
+
+li {
+  list-style: none;
+  float: left;
+  /* 上下のpaddingを33px、左右のpaddingを20pxにしてください */
+  padding:33px 40px;
+
+}
+
+.header {
+  background-color: #26d0c9;
+  color: #fff;
+  height: 90px;
+}
+
+.header-logo {
+  float: left;
+  font-size: 36px;
+  /* 上下のpaddingを20px、左右のpaddingを40pxにしてください */
+  padding:20px 40px;
         }
 
 
     </style>
 {% if name %}
+<div class="header">
+      <div class="header-logo">【卒業制作】 ありがとうを伝えるアプリ</div>
+      <div class="header-list">
+        <ul>
+          <li>▼nishi3607</li>
+          <li>▼学んだこと</li>
+          <li>▼頑張ること</li>
+          <li>▼お問い合わせ</li>
+        </ul>
+      </div>
+    </div>
 <dir class="input_name">〜{{name}}さんへ〜</dir>
 <dir class="blue">{{name}}さん！!４ヶ月間本当にありがとうございました！</dir>
-<h2>感謝の気持ちでいっぱいです</h2>
 {% else %}
 <h1></h1>
 {% endif %}
