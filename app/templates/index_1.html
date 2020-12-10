@@ -5,15 +5,17 @@
   <title>卒業制作　Webアプリ</title>
 </head>
 <body>
-<div class="header"></div>
+<style type="text/css">
+        .input_name{
+        font-size:40px;
+        background-color:#f7f2b4;
+        width:400px;
+        }
+
+    </style>
 {% if name %}
-<h1>〜{{name}}さんへ〜</h1>
+<div class="input_name">〜{{name}}さんへ〜</div>
 <p>４ヶ月間、ありがとうございました。</p>
-<h3>たくさんのことを学びました</h3>
-<p>例えば・・</p>
-{% for word in study %}
-<p>{{word}}</p>
-{% endfor %}
 {% else %}
 <h1></h1>
 {% endif %}
@@ -23,3 +25,4 @@
 </form>
 </body>
 </html>
+
