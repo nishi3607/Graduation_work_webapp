@@ -8,6 +8,7 @@
 <style type="text/css">
         body {
           font-family: "Avenir Next";
+
         }
         .input_name{
         font-size:100px;
@@ -28,7 +29,7 @@
         .header {
           background-color: #26d0c9;
           color: #fff;
-          height: 90px;
+          height: 100px;
         }
 
         .header-logo {
@@ -37,8 +38,8 @@
           padding:20px 40px;
                 }
          .main {
-          background-color: #bdf7f1;
-          height: 600px;
+          background-color:#FFFFF;
+          height: 500px;
 }
 
          .footer {
@@ -61,7 +62,7 @@
       </div>
     </div>
 <div class="main">
-  <div class="main-logo"><dir class="input_name">〜{{name}}{{teacher_name}}さんへ〜</dir></div>
+  <div class="main-logo"><dir class="input_name">{{name}}{{teacher_name}}さんへ</dir></div>
   <dir class="messeage">{{name}}さん！約４ヶ月間ありがとうございました！</dir>
 </div>
 
@@ -69,7 +70,6 @@
       </div>
 
 {% else %}
-<h1></h1>
 {% endif %}
 <form action="/index" method="POST">
   <input type=text name="name" placeholder="名前入れてくださいな">
