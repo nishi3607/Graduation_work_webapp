@@ -46,8 +46,12 @@
            background-color: #ceccf3;
            height: 270px;
 }
-
-
+         .input_format{
+         padding:100px;
+}
+         .input{
+         font-size:100px;
+         }
     </style>
 {% if name %}
 <div class="header">
@@ -72,8 +76,8 @@
 {% else %}
 {% endif %}
 <form action="/index" method="POST">
-  <input type=text name="name" placeholder="名前入れてくださいな">
-  <input type="submit" value="ぽちっとな">
+  <input class="input" type=text name="name" placeholder="名前入れてくださいな">
+  <input class="input_format" type="submit" value="ぽちっとな">
 
 </form>
 </body>
