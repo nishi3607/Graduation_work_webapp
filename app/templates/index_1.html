@@ -11,10 +11,15 @@
 
         }
         .input_name{
+        margin:100px 400px;
         font-size:100px;
+        padding: 10px; margin-bottom: 10px; border: 5px double #333333;
          }
         .messeage{
-        font-size:60px;
+        margin:50px 50px;
+        font-size:50px;
+        padding: 10px; margin-bottom: 10px; border: 1px dashed #333333; border-radius: 5px
+
 
 
         }
@@ -39,7 +44,7 @@
                 }
          .main {
           background-color:#FFFFF;
-          height: 500px;
+          height: 1200px;
 }
 
          .footer {
@@ -47,13 +52,16 @@
            height: 270px;
 }
          .input_format{
-         padding:100px;
+         font-size:50px;
+         padding:20px;
 }
          .input{
-         font-size:100px;
+         margin:0px;
+         font-size:50px;
+         padding:20px;
          }
     </style>
-{% if name %}
+{%if name %}
 <div class="header">
       <div class="header-logo">【卒業制作】 ありがとうを伝えるアプリ</div>
       <div class="header-list">
@@ -66,10 +74,17 @@
       </div>
     </div>
 <div class="main">
-  <div class="main-logo"><dir class="input_name">{{name}}{{teacher_name}}さんへ</dir></div>
-  <dir class="messeage">{{name}}さん！約４ヶ月間ありがとうございました！</dir>
+  <div class="main-logo"><div class="input_name">　{{name}}️さんへ　</div>
+  <div class="messeage">
+      <p>👩：こんにちは。日曜日コースの西です。</p>
+      <p>今までほんとうに、お疲れ様でした。</p>
+      <p>そして{{name}}さん、約４ヶ月間、ありがとうございました！</p>
+      <p>皆さんと学ぶことができて、本当に楽しかったです！</p>
+      <p>これから寒くなるのでお体に気をつけてくださいね⛄️</p>
+      <p>またどこかでお会いできるのを楽しみにしています。</p>
+  </div>
 </div>
-
+</div>
     <div class="footer">
       </div>
 
@@ -78,6 +93,7 @@
 <form action="/index" method="POST">
   <input class="input" type=text name="name" placeholder="名前入れてくださいな">
   <input class="input_format" type="submit" value="ぽちっとな">
+
 
 </form>
 </body>
