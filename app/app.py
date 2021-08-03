@@ -11,20 +11,15 @@ app = Flask(__name__)
 
 # [/]にアクセスがあった
 @app.route("/")
-
-
-
 @app.route("/index")
 def index():
     name = request.args.get("name")
-
 
     return render_template("index_1.html", name=name)
 
 
 @app.route("/index", methods=["post"])
 def post():
-
     name = request.form["name"]
     return render_template("index_1.html", name=name)
 
